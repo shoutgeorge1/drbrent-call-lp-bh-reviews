@@ -25,7 +25,7 @@
     
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
     <link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
-    <link href='https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700|Bebas+Neue:regular&display=swap' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap' rel='stylesheet' />
     
     <style>
         * {
@@ -35,13 +35,14 @@
         }
         
         :root {
-            --contrast: #222222;
+            --contrast: #000000;
             --contrast-2: #575760;
             --contrast-3: #b2b2be;
             --base: #f0f0f0;
             --base-2: #f7f8f9;
             --base-3: #ffffff;
-            --accent: #1e73be;
+            --base-warm: #f7f5f2;
+            --accent: #000000;
         }
         
         html {
@@ -50,36 +51,40 @@
         }
         
         body {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 300;
-            font-size: 30px;
-            background-color: var(--base-3);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            background-color: var(--base-warm);
             color: var(--contrast);
-            line-height: 1.6;
+            line-height: 1.8;
+            letter-spacing: 1px;
             overflow-x: hidden;
             width: 100%;
             max-width: 100vw;
         }
         
         h1 {
-            font-family: 'Bebas Neue', display;
-            font-size: 70px;
-            font-weight: normal;
-            line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: 1px;
         }
         
         h2 {
-            font-family: 'Bebas Neue', display;
-            font-size: 100px;
-            font-weight: normal;
-            line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: 1px;
         }
         
         h3 {
-            font-family: 'Bebas Neue', display;
-            font-size: 50px;
-            font-weight: normal;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 500;
             line-height: 1.2;
+            letter-spacing: 1px;
         }
         
         /* Touch optimization */
@@ -95,9 +100,10 @@
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 50px; }
-            h2 { font-size: 50px; }
-            body { font-size: 20px; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 32px; }
+            h3 { font-size: 28px; }
+            body { font-size: 16px; }
         }
         
         .grid-container {
@@ -134,8 +140,10 @@
             display: flex;
             gap: 20px;
             align-items: center;
-            font-size: 18px;
+            font-size: 16px;
             flex-shrink: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
         
         .header-phones a {
@@ -155,7 +163,7 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,248,252,0.95) 100%), 
+            background: linear-gradient(135deg, rgba(247,245,242,0.95) 0%, rgba(247,245,242,0.95) 100%), 
                         url('https://www.brentmoelleken.com/wp-content/uploads/2024/05/hero-background.jpg') center/cover;
             padding: 80px 0;
             min-height: 85vh;
@@ -190,10 +198,11 @@
         }
         
         .hero-location {
-            font-size: 28px;
+            font-size: 18px;
             color: var(--contrast-2);
             margin-bottom: 30px;
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
         
         .hero-image-container {
@@ -210,9 +219,11 @@
         
         .hero-credentials {
             margin-top: 30px;
-            font-size: 20px;
-            line-height: 1.9;
+            font-size: 18px;
+            line-height: 1.8;
+            letter-spacing: 1px;
             color: var(--contrast);
+            font-weight: 400;
         }
         
         .hero-credentials strong {
@@ -221,20 +232,22 @@
         }
         
         .university-logos {
-            margin-top: 25px;
+            margin-top: 40px;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 20px;
             flex-wrap: wrap;
         }
         
         .university-logos img {
             max-width: 100%;
             height: auto;
-            max-height: 45px;
+            display: block;
+            width: auto;
+            max-height: 80px;
             flex: 0 0 auto;
-            opacity: 0.7;
         }
         
         .hero-right {
@@ -243,40 +256,43 @@
         }
         
         .cta-box {
-            background: var(--base-3);
+            background: var(--base-warm);
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             border-radius: 3px;
         }
         
         .cta-box h3 {
-            font-size: 42px;
+            font-size: 32px;
             margin-bottom: 20px;
             color: var(--contrast);
         }
         
         .cta-box p {
-            font-size: 22px;
+            font-size: 18px;
             margin-bottom: 25px;
-            line-height: 1.7;
+            line-height: 1.8;
+            letter-spacing: 1px;
             color: var(--contrast);
+            font-weight: 400;
         }
         
         .phone-display {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--contrast);
             display: block;
             margin: 15px 0;
             text-decoration: none;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
             min-height: 44px;
             display: block;
             -webkit-tap-highlight-color: rgba(0,0,0,0.1);
         }
         
         .phone-display:hover {
-            color: #155a94;
+            color: var(--contrast-2);
         }
         
         .call-cta {
@@ -284,27 +300,29 @@
             background: var(--accent);
             color: var(--base-3);
             padding: 18px 45px;
-            font-size: 26px;
-            font-weight: 500;
+            font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 3px;
+            border-radius: 0;
             margin-top: 20px;
             transition: background 0.3s;
             text-align: center;
             width: 100%;
             min-height: 44px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             -webkit-tap-highlight-color: rgba(0,0,0,0.1);
         }
         
         .call-cta:hover {
-            background: #155a94;
+            background: #333333;
         }
         
         /* About Section */
         .about-section {
             padding: 80px 0;
             text-align: center;
-            background: var(--base-3);
+            background: var(--base-warm);
         }
         
         .about-section h2 {
@@ -313,12 +331,13 @@
         }
         
         .about-section p {
-            font-size: 26px;
+            font-size: 18px;
             max-width: 1100px;
             margin: 0 auto 50px;
             line-height: 1.8;
+            letter-spacing: 1px;
             color: var(--contrast);
-            font-weight: 300;
+            font-weight: 400;
         }
         
         .awards-logos {
@@ -337,7 +356,7 @@
         /* Before and After Section */
         .before-after-section {
             padding: 80px 0;
-            background: var(--base-3);
+            background: var(--base-warm);
             text-align: center;
         }
         
@@ -348,10 +367,11 @@
         
         .before-after-section h3 {
             font-size: 24px;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 50px;
+            letter-spacing: 1px;
             color: var(--contrast-2);
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .before-after-gallery {
@@ -376,28 +396,30 @@
         
         /* Reviews Section */
         .reviews-section {
-            padding: 80px 0;
-            background: var(--base-3);
+            padding: 100px 0;
+            background: var(--base-warm);
             text-align: center;
-            display: block;
-            visibility: visible;
-            min-height: 500px;
         }
         
         .reviews-section h2 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: var(--contrast);
-            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
         
         .reviews-section .reviews-subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--contrast-2);
-            margin-bottom: 50px;
-            font-weight: 300;
-            max-width: 800px;
+            margin-bottom: 60px;
+            font-weight: 400;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
+            letter-spacing: 1px;
         }
         
         .reviews-grid {
@@ -407,71 +429,105 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 40px;
-            visibility: visible;
         }
         
         .review-item {
-            background: var(--base-2);
-            padding: 40px;
-            border-radius: 3px;
+            background: var(--base-3);
+            padding: 40px 35px;
+            border-radius: 0;
             text-align: left;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
         
-        .review-item:nth-child(odd) {
-            background: #eee;
+        .review-item::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 60px;
+            font-family: 'Playfair Display', serif;
+            color: rgba(0,0,0,0.08);
+            line-height: 1;
+            font-weight: 400;
+        }
+        
+        .review-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            border-color: rgba(0,0,0,0.1);
         }
         
         .review-item h3 {
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 20px;
+            font-weight: 500;
             color: var(--contrast);
             margin-bottom: 15px;
-            line-height: 1.3;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
+            line-height: 1.5;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
         }
         
         .review-stars {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            order: -1;
         }
         
         .review-stars img {
-            width: 129px;
-            height: 26px;
+            width: 110px;
+            height: 22px;
             display: block;
         }
         
         .review-date {
-            font-size: 16px;
+            font-size: 11px;
             color: var(--contrast-2);
-            margin-bottom: 20px;
-            font-weight: 300;
+            margin-bottom: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .review-item p {
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.9;
             color: var(--contrast);
-            font-weight: 300;
-            margin-bottom: 20px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            letter-spacing: 0.3px;
+            flex-grow: 1;
+            font-style: italic;
+            position: relative;
+            padding-left: 15px;
         }
         
         .review-author {
-            font-size: 16px;
+            font-size: 13px;
             color: var(--contrast);
-            font-weight: 500;
-            margin-top: 20px;
+            font-weight: 600;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .review-author strong {
             font-weight: 600;
+            color: var(--contrast);
         }
         
         /* Team Section */
         .team-section {
             padding: 80px 0;
-            background: var(--base-3);
+            background: var(--base-warm);
         }
         
         .team-section h2 {
@@ -561,14 +617,15 @@
         }
         
         .procedure-left p {
-            font-size: 22px;
+            font-size: 18px;
             line-height: 1.8;
+            letter-spacing: 1px;
             color: var(--contrast);
-            font-weight: 300;
+            font-weight: 400;
         }
         
         .procedure-right {
-            background: var(--base-3);
+            background: var(--base-warm);
             padding: 40px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             border-radius: 3px;
@@ -576,8 +633,9 @@
         
         .procedure-list {
             list-style: none;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.8;
+            letter-spacing: 1px;
             margin-bottom: 30px;
         }
         
@@ -585,7 +643,7 @@
             font-weight: 600;
             margin-top: 25px;
             margin-bottom: 12px;
-            font-size: 24px;
+            font-size: 20px;
             color: var(--contrast);
         }
         
@@ -603,13 +661,14 @@
             position: relative;
             margin-bottom: 8px;
             color: var(--contrast-2);
+            letter-spacing: 1px;
         }
         
         .procedure-list li:before {
             content: "•";
             position: absolute;
             left: 0;
-            color: var(--accent);
+            color: var(--contrast);
             font-weight: bold;
         }
         
@@ -634,14 +693,15 @@
         .footer-cta h3 {
             margin-bottom: 25px;
             color: var(--base-3);
-            font-size: 42px;
+            font-size: 32px;
         }
         
         .footer-cta p {
             color: var(--base-3);
-            font-size: 22px;
+            font-size: 18px;
             margin-bottom: 25px;
-            line-height: 1.7;
+            line-height: 1.8;
+            letter-spacing: 1px;
         }
         
         .call-cta-white {
@@ -668,7 +728,7 @@
         }
         
         .footer-locations h2 {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 30px;
             color: var(--base-3);
             text-align: right;
@@ -676,22 +736,25 @@
         
         .location {
             margin-bottom: 35px;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.8;
+            letter-spacing: 1px;
             color: var(--base-3);
             text-align: right;
         }
         
         .location-phone {
-            font-size: 26px;
+            font-size: 18px;
             font-weight: 600;
             margin-top: 12px;
+            letter-spacing: 1px;
         }
         
         .location-phone a {
             color: var(--base-3);
             text-decoration: none;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
             -webkit-tap-highlight-color: rgba(255,255,255,0.2);
         }
         
@@ -705,7 +768,7 @@
         }
         
         .footer-social h2 {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 25px;
             color: var(--base-3);
         }
@@ -782,17 +845,29 @@
             
             .reviews-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 30px;
                 padding: 0 30px;
             }
             
             .reviews-section {
-                padding: 60px 0;
+                padding: 80px 0;
+            }
+            
+            .reviews-section h2 {
+                font-size: 36px;
             }
             
             .reviews-section .reviews-subtitle {
-                font-size: 18px;
-                margin-bottom: 40px;
+                font-size: 17px;
+                margin-bottom: 50px;
+            }
+            
+            .review-item {
+                padding: 40px 30px;
+            }
+            
+            .review-item h3 {
+                font-size: 20px;
             }
         }
         
@@ -1052,38 +1127,51 @@
             
             .reviews-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 30px;
                 padding: 0 20px;
             }
             
             .reviews-section {
-                padding: 50px 0;
+                padding: 60px 0;
             }
             
             .reviews-section h2 {
-                font-size: 40px;
+                font-size: 32px;
+                margin-bottom: 15px;
             }
             
             .reviews-section .reviews-subtitle {
                 font-size: 16px;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
             
             .review-item {
-                padding: 30px 20px;
+                padding: 35px 25px;
             }
             
             .review-item h3 {
                 font-size: 20px;
+                margin-bottom: 15px;
             }
             
             .review-item p {
-                font-size: 16px;
+                font-size: 15px;
+                line-height: 1.7;
             }
             
             .review-stars img {
-                width: 100px;
-                height: 20px;
+                width: 110px;
+                height: 22px;
+            }
+            
+            .review-date {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+            
+            .review-author {
+                font-size: 13px;
+                padding-top: 15px;
             }
         }
         
@@ -1409,59 +1497,58 @@
         <div class="grid-container">
             <h2>Hear from Our Patients</h2>
             <p class="reviews-subtitle">See what our clients have to say about their experience with Dr. Brent and the office, for both surgery and non-surgical options:</p>
-            <!-- Reviews section added -->
             <div class="reviews-grid">
                 <div class="review-item">
-                    <h3>My Experience ... Was The Absolute Best Possible</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on October 24, 2016</div>
+                    <h3>My Experience ... Was The Absolute Best Possible</h3>
+                    <div class="review-date">October 24, 2016</div>
                     <p>My experience with Dr. Moelleken and his staff was the absolute best possible. Dr. was very interested in his patient as were his staff. Making you comfortable and secure in the knowledge of his skills, which are the best. No problems. No looking "done" just better. Thank you.</p>
                     <div class="review-author">by <strong>SG</strong></div>
                 </div>
                 <div class="review-item">
-                    <h3>I Look About 10 Years Younger and About 20 Pounds Thinner</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on September 7, 2016</div>
+                    <h3>I Look About 10 Years Younger and About 20 Pounds Thinner</h3>
+                    <div class="review-date">September 7, 2016</div>
                     <p>Dr. Moelleken and his staff were wonderful from start to finish. I am 51 years old. I had a face lift, my upper lids done, LiveFill®, chin implant and a necklace. Prior to surgery I was very self conscious about my jowls and neck. Dr. Moelleken did an incredible job! I look about 10 years younger and about 20 pounds thinner. It has been three months since my surgery and I couldn't be happier. I highly recommend Dr. Moelleken, it has been worth it.</p>
                     <div class="review-author">by <strong>JM</strong></div>
                 </div>
                 <div class="review-item">
-                    <h3>The Grade Would Be A+++++</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on August 11, 2016</div>
+                    <h3>The Grade Would Be A+++++</h3>
+                    <div class="review-date">August 11, 2016</div>
                     <p>The dr. and his staff were great! I can't say enough about them. The dr. is very honest and upfront on what to expect. I am very happy with the results, I am a new man. I used to lower my neck and see fat rolls coming out of each side of my neck and bottom chin. One week later I did it and the neck didn't even bulge out slightly. Additionally removed abnormal bulges that occurred due to facial trauma and are now gone. The grade would be A+++++.</p>
                     <div class="review-author">by <strong>RC</strong></div>
                 </div>
                 <div class="review-item">
-                    <h3>I Could Not Be More Thrilled With The Results!</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on July 20, 2016</div>
+                    <h3>I Could Not Be More Thrilled With The Results!</h3>
+                    <div class="review-date">July 20, 2016</div>
                     <p>Dr. Moelleken and all his staff were so sweet and accommodating when it came to all my needs. Dr. Moelleken was quick to return phone calls if there were any concerns or questions. After having three children I had so much extra skin, I decided to have a full abdominoplasty and breast lift with the removal of breast implants. I could not be more thrilled with the results! I have such high regard and trust in Dr. Moelleken and all his staff that I would send anyone to him with complete confidence.</p>
                     <div class="review-author">by <strong>JQ</strong></div>
                 </div>
                 <div class="review-item">
-                    <h3>I Highly Recommend The "Hybrid Abdominoplasty"</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on June 30, 2016</div>
+                    <h3>I Highly Recommend The "Hybrid Abdominoplasty"</h3>
+                    <div class="review-date">June 30, 2016</div>
                     <p>For years I was searching for a doctor that would fix my stomach without leaving me with a huge hip-to-hip scar. I read an article on Dr. Moelleken's "Hybrid abdominoplasty" and was amazed at the results. After meeting him and understanding the procedure, I knew he was the right doctor and the right procedure for me. He not only impresses me with his incredible background, resume, and knowledge, but he was so down to earth, easy to talk to and a good listener. I was also impressed with his support staff and nurses. They were considerate to my conditions and needs. I highly recommend Dr. Moelleken and his staff. And for anyone who is fit needs a little fixing-up after having kids, I highly recommend the "Hybrid abdominoplasty" that only Dr. Moelleken is presently performing.</p>
                     <div class="review-author">by <strong>DMG</strong></div>
                 </div>
                 <div class="review-item">
-                    <h3>Can Not Say Enough About This Amazing Surgeon</h3>
                     <div class="review-stars">
                         <img src="https://www.drbrent.com/wp-content/uploads/5-stars-6.png" alt="5 stars" />
                     </div>
-                    <div class="review-date">– Written on April 22, 2016</div>
+                    <h3>Can Not Say Enough About This Amazing Surgeon</h3>
+                    <div class="review-date">April 22, 2016</div>
                     <p>I had a facelift with Dr. Moelleken 3 years ago and love it! I look completely natural not that pulled monster look that you see so often, I look great. Staff is very supportive both pre-post surgery. Minimal pain 1 day, quick recovery, back to work 10 days later. Can not say enough about this amazing surgeon. Thank you Dr. Moelleken!</p>
                     <div class="review-author">by <strong>RT</strong></div>
                 </div>
