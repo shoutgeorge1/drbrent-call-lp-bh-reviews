@@ -8,7 +8,7 @@
     
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
     <link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
-    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700|Bebas+Neue:regular&display=swap' rel='stylesheet' />
     
     <style>
         * {
@@ -18,14 +18,13 @@
         }
         
         :root {
-            --contrast: #000000;
+            --contrast: #222222;
             --contrast-2: #575760;
             --contrast-3: #b2b2be;
             --base: #f0f0f0;
             --base-2: #f7f8f9;
             --base-3: #ffffff;
-            --base-warm: #f7f5f2;
-            --accent: #000000;
+            --accent: #1e73be;
         }
         
         html {
@@ -34,10 +33,10 @@
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 18px;
-            background-color: var(--base-warm);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            font-size: 30px;
+            background-color: var(--base-3);
             color: var(--contrast);
             line-height: 1.6;
             overflow-x: hidden;
@@ -46,27 +45,24 @@
         }
         
         h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 48px;
-            font-weight: 600;
+            font-family: 'Bebas Neue', display;
+            font-size: 70px;
+            font-weight: normal;
             line-height: 1.2;
-            letter-spacing: -0.5px;
         }
         
         h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 42px;
-            font-weight: 600;
+            font-family: 'Bebas Neue', display;
+            font-size: 100px;
+            font-weight: normal;
             line-height: 1.2;
-            letter-spacing: -0.5px;
         }
         
         h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 600;
+            font-family: 'Bebas Neue', display;
+            font-size: 50px;
+            font-weight: normal;
             line-height: 1.2;
-            letter-spacing: -0.5px;
         }
         
         /* Touch optimization */
@@ -82,10 +78,9 @@
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 36px; }
-            h2 { font-size: 32px; }
-            h3 { font-size: 28px; }
-            body { font-size: 16px; }
+            h1 { font-size: 50px; }
+            h2 { font-size: 50px; }
+            body { font-size: 20px; }
         }
         
         .grid-container {
@@ -122,9 +117,8 @@
             display: flex;
             gap: 20px;
             align-items: center;
-            font-size: 16px;
+            font-size: 18px;
             flex-shrink: 0;
-            font-weight: 400;
         }
         
         .header-phones a {
@@ -144,7 +138,7 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(247,245,242,0.95) 0%, rgba(247,245,242,0.95) 100%), 
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,248,252,0.95) 100%), 
                         url('https://www.brentmoelleken.com/wp-content/uploads/2024/05/hero-background.jpg') center/cover;
             padding: 80px 0;
             min-height: 85vh;
@@ -179,10 +173,10 @@
         }
         
         .hero-location {
-            font-size: 18px;
+            font-size: 28px;
             color: var(--contrast-2);
             margin-bottom: 30px;
-            font-weight: 400;
+            font-weight: 300;
         }
         
         .hero-image-container {
@@ -199,10 +193,9 @@
         
         .hero-credentials {
             margin-top: 30px;
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 20px;
+            line-height: 1.9;
             color: var(--contrast);
-            font-weight: 400;
         }
         
         .hero-credentials strong {
@@ -230,41 +223,40 @@
         }
         
         .cta-box {
-            background: var(--base-warm);
+            background: var(--base-3);
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             border-radius: 3px;
         }
         
         .cta-box h3 {
-            font-size: 32px;
+            font-size: 42px;
             margin-bottom: 20px;
             color: var(--contrast);
         }
         
         .cta-box p {
-            font-size: 18px;
+            font-size: 22px;
             margin-bottom: 25px;
             line-height: 1.7;
             color: var(--contrast);
-            font-weight: 400;
         }
         
         .phone-display {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 600;
-            color: var(--contrast);
+            color: var(--accent);
             display: block;
             margin: 15px 0;
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Oswald', sans-serif;
             min-height: 44px;
             display: block;
             -webkit-tap-highlight-color: rgba(0,0,0,0.1);
         }
         
         .phone-display:hover {
-            color: var(--contrast-2);
+            color: #155a94;
         }
         
         .call-cta {
@@ -272,29 +264,27 @@
             background: var(--accent);
             color: var(--base-3);
             padding: 18px 45px;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 26px;
+            font-weight: 500;
             text-decoration: none;
-            border-radius: 0;
+            border-radius: 3px;
             margin-top: 20px;
             transition: background 0.3s;
             text-align: center;
             width: 100%;
             min-height: 44px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
             -webkit-tap-highlight-color: rgba(0,0,0,0.1);
         }
         
         .call-cta:hover {
-            background: #333333;
+            background: #155a94;
         }
         
         /* About Section */
         .about-section {
             padding: 80px 0;
             text-align: center;
-            background: var(--base-warm);
+            background: var(--base-3);
         }
         
         .about-section h2 {
@@ -303,12 +293,12 @@
         }
         
         .about-section p {
-            font-size: 18px;
+            font-size: 26px;
             max-width: 1100px;
             margin: 0 auto 50px;
             line-height: 1.8;
             color: var(--contrast);
-            font-weight: 400;
+            font-weight: 300;
         }
         
         .awards-logos {
@@ -329,7 +319,7 @@
         /* Team Section */
         .team-section {
             padding: 80px 0;
-            background: var(--base-warm);
+            background: var(--base-3);
         }
         
         .team-section h2 {
@@ -419,14 +409,14 @@
         }
         
         .procedure-left p {
-            font-size: 18px;
+            font-size: 22px;
             line-height: 1.8;
             color: var(--contrast);
-            font-weight: 400;
+            font-weight: 300;
         }
         
         .procedure-right {
-            background: var(--base-warm);
+            background: var(--base-3);
             padding: 40px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             border-radius: 3px;
@@ -434,7 +424,7 @@
         
         .procedure-list {
             list-style: none;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 1.8;
             margin-bottom: 30px;
         }
@@ -443,7 +433,7 @@
             font-weight: 600;
             margin-top: 25px;
             margin-bottom: 12px;
-            font-size: 20px;
+            font-size: 24px;
             color: var(--contrast);
         }
         
@@ -467,7 +457,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: var(--contrast);
+            color: var(--accent);
             font-weight: bold;
         }
         
@@ -541,7 +531,7 @@
         }
         
         .location-phone {
-            font-size: 18px;
+            font-size: 26px;
             font-weight: 600;
             margin-top: 12px;
         }
@@ -549,7 +539,7 @@
         .location-phone a {
             color: var(--base-3);
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Oswald', sans-serif;
             -webkit-tap-highlight-color: rgba(255,255,255,0.2);
         }
         
@@ -988,7 +978,7 @@
                 <img src="https://www.brentmoelleken.com/wp-content/uploads/2023/11/Brent-Moelleken-Logo.png" alt="Brent Moelleken Logo" />
             </div>
             <div class="header-phones">
-                <a href="tel:8059792535" aria-label="Call Beverly Hills">Beverly Hills 805.979.2535</a>
+                <a href="tel:8059792535" aria-label="Call Santa Barbara">Santa Barbara 805.979.2535</a>
             </div>
         </div>
     </header>
